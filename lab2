@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+double func1(double a){
+    float k2 , t1 ;
+    double z1=2*sin(k2)*sin(k2)*cos(t1)*cos(t1);
+    return z1;
+}
+double func2(double a){
+    float t2;
+    double z2=(1/4)-1/4*sin(t2);
+    return z2;
+}
+int main(){
+    float b, k1,k2,v1,v2=3.1415926,t1,t2;
+    printf("vvedite alfa\n");
+    scanf("%f",&k1);
+    printf("vvedite 'b'\n");
+    scanf("%f",&b);
+    k2=(v2*3-2*k1)/180;
+    t1=(5*v2+2*k1)/180;
+    t2=(5/2*v2-8*k1)/180;
+    double a;
+    double z1=func1(a);
+    double z2=func2(a);
+    printf("z1: %f\n",z1);
+    printf("z2: %f\n",z2);
+    return 0;
+
+}

@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    char b;
+    int a;
+    printf("vvod chisla\n");
+    scanf("%d",&a);
+    fflush(stdin);
+    printf("%d\n",a);
+    printf("vvod simvola\n");
+    scanf("%c",&b);
+    printf("%c\n",b);
+    return 0;
+}

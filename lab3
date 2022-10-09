@@ -1,0 +1,42 @@
+ /* 1,2 #include<stdio.h>
+int main(){
+    char b;
+    scanf("%a",&b);
+    printf("%a\n",b);
+    return 0;
+
+}
+*/
+/*3 #include<stdio.h>
+int main(){
+    char a;
+    scanf("%d",&a);
+    printf("%o\n",a);
+    char b;
+    scanf("%d",&b);
+    printf("%5d",b);
+    return 0;
+}
+/*4
+#include<stdio.h>
+int main(){
+    char a ;
+    scanf("%d",&a);
+    printf("%o\n",a);
+    char b = ~a;
+    printf("%o", b);
+    return 0;
+    }
+*/
+/* 5#include<stdio.h>
+int main(){
+
+    char a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    char c = a | b;
+    printf("%o", c);
+    return 0;
+
+}
+ */

@@ -1,0 +1,71 @@
+
+#include <stdio.h>
+#include <math.h>
+
+
+struct Parallelogram
+{
+    double x0;
+    double y0;
+    double x1;
+    double y1;
+    double x2;
+    double y2;
+    double length1;
+    double length2;
+    double length3;
+    double sin;
+    double perimeter;
+    double square;
+};
+
+double GetLength(double x1, double x2, double y1, double y2) {
+    double res_length = pow(sqrt(x1 - x2), 2) + pow(sqrt(y1 - y2), 2);
+    return res_length;
+
+}
+
+
+void CalculatePerimeter(struct Parallelogram * this)
+{
+    this->length1 = GetLength(this->x0, this->x1, this->y0, this->y1);
+    this->length2 = GetLength(this->x0, this->x2, this->y0, this->y2);
+    this->perimeter = this->length1 * 2 + this->length2 * 2;
+}
+
+void CalculateSquare(struct Parallelogram * this)
+{
+    this->length1 = GetLength(this->x0, this->x1, this->y0, this->y1);
+    this->length2 = GetLength(this->x0, this->x2, this->y0, this->y2);
+    this->length3 = GetLength(this->x1, this->x2, this->y1, this->y2);
+    double cos = (this->length1 * this-> length1 + this->length2 * this->length2 - this->length3 * this->length3)
+                 / (2 * this->length1 * this-> length1 * this->length2 * this->length2);
+    this->sin = 1 - cos * cos;
+    this->square = this->length1 * this->length2 * this->sin;
+}
+
+
+
+
+int main() {
+    printf("Enter the coordinates of the starting point, and then 2 coordinates of the points adjacent to this side\n");
+    double x0, x1, x2;
+    double y0, y1, y2;
+    scanf("%lf", &x0);
+    scanf("%lf", &y0);
+    scanf("%lf", &x1);
+    scanf("%lf", &y1);
+    scanf("%lf", &x2);
+    scanf("%lf", &y2);
+
+    struct Parallelogram s = {x0, y0, x1, y1, x2, y2};
+
+    CalculatePerimeter(&s);
+    CalculateSquare(&s);
+
+    printf("Perimeter = %lf\n", s.perimeter);
+    printf("Square = %lf", s.square);
+
+    return 0;
+
+}
